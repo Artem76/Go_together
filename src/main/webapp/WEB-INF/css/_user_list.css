@@ -1,0 +1,25 @@
+
+
+thead.thead_user_list, tbody.tbody_user_list{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+tbody.tbody_user_list {
+    /*height: calc(100% - 38px);*/
+    overflow-y: auto;
+    overflow-x: auto;
+
+}
+
+tbody.tbody_user_list tr{
+    cursor: pointer;
+}
+
+
+tfoot.tfoot_user_list tr{
+
+    display: block;
+    box-sizing: border-box;
+}

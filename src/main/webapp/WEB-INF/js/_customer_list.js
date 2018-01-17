@@ -1,0 +1,116 @@
+/**
+ * Created by АРТЕМ on 14.08.2017.
+ */
+
+(function () {
+
+    var db = {
+        loadData: function (filter) {
+            var list = [];
+            $.each(selectedItems, function (n, row) {
+                if (row.name.match(document.filter) || row.email.match(document.filter) || row.manager.match(document.filter)) list.push(row);
+            })
+
+            return list;
+        }
+    };
+
+    window.db = db;
+
+    db.jsgrid_height = 0;
+    db.messages = [];
+
+    window.db = db;
+    db.jsgrid_height = 0;
+
+}());
+
+
+$(document).ready(function () {
+
+    //=============== Resize ==============================
+
+    var resizeBlock = function () {
+        var heightWindow = $(window).height();
+        $('.customer-list').css('min-height', (heightWindow - 155) + 'px');
+        db.jsgrid_height = (((heightWindow - 245) > 200) ? (heightWindow - 245) : 200) + 'px';
+    }
+
+    if (document.getElementsByClassName('customer-list')) {
+        $(window).resize(resizeBlock);
+        resizeBlock();
+    }
+
+
+    //=============== jsGrid ==============================
+
+    jsGrid.setDefaults({
+        tableClass: "jsgrid-table table table-striped table-hover"
+    }), jsGrid.setDefaults("text", {
+        _createTextBox: function () {
+            return $("<input>").attr("type", "text").attr("class", "form-control input-sm")
+        }
+    }), jsGrid.setDefaults("number", {
+        _createTextBox: function () {
+            return $("<input>").attr("type", "number").attr("class", "form-control input-sm")
+        }
+    }), jsGrid.setDefaults("textarea", {
+        _createTextBox: function () {
+            return $("<input>").attr("type", "textarea").attr("class", "form-control")
+        }
+    }), jsGrid.setDefaults("control", {
+        _createGridButton: function (cls, tooltip, clickHandler) {
+            var grid = this._grid;
+            return $("<button>").addClass(this.buttonClass).addClass(cls).attr({
+                type: "button",
+                title: tooltip
+            }).on("click", function (e) {
+                clickHandler(grid, e)
+            })
+        }
+    }), jsGrid.setDefaults("select", {
+        _createSelect: function () {
+            var $result = $("<select>").attr("class", "form-control form-control-sm"),
+                valueField = this.valueField,
+                textField = this.textField,
+                selectedIndex = this.selectedIndex;
+            return $.each(this.items, function (index, item) {
+                var value = valueField ? item[valueField] : index,
+                    text = textField ? item[textField] : item,
+                    $option = $("<option>").attr("value", value).text(text).appendTo($result);
+                $option.prop("selected", selectedIndex === index);
+            }), $result;
+        }
+    })
+
+    window.jsGrid_init = function () {
+        $("#jsGrid-customer-list").jsGrid({
+            height: db.jsgrid_height,
+            width: "100%",
+            autoload: true,
+            controller: db,
+            loadIndication: true,
+            rowClick: function (args) {
+                document.location.href = "/admin_full_customer_edit?id_customer=" + args.item.id/* + "&error=&err_name="*/;
+            },
+            fields: [
+                {title: "id", name: "id", type: "text", width: 100, align: "center", visible: false},
+                {title: "Name", name: "name", type: "text", width: 200, align: "center"},
+                {title: "Email", name: "email", type: "text", width: 150, align: "center"},
+                {title: "Contract Type", name: "contractType", type: "text", width: 100, align: "center"},
+                {title: "Credit Limit", name: "creditLimit", type: "text", width: 75, align: "center"},
+                {title: "Minimal Payment", name: "minimalPayment", type: "text", width: 75, align: "center"},
+                {title: "Manager", name: "manager", type: "text", width: 100, align: "center"},
+                {title: "Status", name: "status", type: "text", width: 75, align: "center"}
+            ],
+        });
+    };
+
+    window.jsGrid_init();
+
+    $("#regex").keyup(function () {
+        document.filter = $('#regex').val();
+        window.jsGrid_init();
+    })
+});
+

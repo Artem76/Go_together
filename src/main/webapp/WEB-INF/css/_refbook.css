@@ -1,0 +1,32 @@
+.tbody_refbook>tr{
+    cursor: pointer;
+}
+
+.table_refbook td{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.mcc, .mnc, .dial_code, .min_length, .max_length{
+    text-align: center;
+}
+
+
+.country_refbook{
+    background-color: #ddd;
+    color: #000000;
+}
+
+.country_refbook>.name{
+    padding-left: 5px;
+}
+
+.network_refbook{
+    background-color:#fff;
+    color: #000000;
+    display: none
+}
+
+.network_refbook>.name{
+    padding-left: 45px;
+}

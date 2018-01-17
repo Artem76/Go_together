@@ -1,0 +1,161 @@
+/*====== Для всех в jsGrid-statistics =====*/
+
+#jsGrid-statistics .jsgrid-row>.jsgrid-cell{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#jsGrid-statistics .jsgrid-alt-row>.jsgrid-cell{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/*====== Для level1 в jsGrid-statistics =====*/
+
+#jsGrid-statistics .jsgrid-row.level1>.jsgrid-cell{
+    background-color: #E5E7E9;
+}
+
+#jsGrid-statistics .jsgrid-alt-row.level1>.jsgrid-cell{
+    background-color: #E5E7E9;
+}
+
+/*====== Для level2 в jsGrid-statistics =====*/
+
+#jsGrid-statistics .jsgrid-row.level2>.jsgrid-cell{
+    background-color: #F2F3F4;
+}
+
+#jsGrid-statistics .jsgrid-alt-row.level2>.jsgrid-cell{
+    background-color: #F2F3F4;
+}
+
+/*====== Для level3 в jsGrid-statistics =====*/
+
+#jsGrid-statistics .jsgrid-row.level3>.jsgrid-cell{
+    background-color: #F8F9F9
+}
+
+#jsGrid-statistics .jsgrid-alt-row.level3>.jsgrid-cell{
+    background-color: #F8F9F9
+}
+
+
+#jsGrid-statistics .jsgrid-row.jsgrid-selected-row>.jsgrid-cell{
+    background-color: #c4e2ff;
+}
+
+#jsGrid-statistics .jsgrid-alt-row.jsgrid-selected-row>.jsgrid-cell{
+    background-color: #c4e2ff;
+}
+
+
+
+.btn_box{
+    height: 31px;
+    margin-bottom: 3px;
+}
+
+.date_form{
+    box-sizing: border-box;
+    width: 290px;
+    height: 31px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+}
+
+.dd_menu{
+    box-sizing: border-box;
+    height: 31px;
+    margin-bottom: 3.25px;
+    border: 1px solid rgba(0,0,0,.15);
+    float: left;
+    margin-right: 3px;
+}
+
+#mp_list{
+    padding-bottom: 0px;
+}
+
+.thead_rss, .tbody_rss{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.tbody_rss{
+    /*height: calc(100% - 42px);*/
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.tbody_rss tr:not(.space){
+   cursor: pointer;
+    height: 16px;
+}
+
+.table_rss tr:not(.space) td{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tfoot_rss tr{
+    display: block;
+    box-sizing: border-box;
+}
+
+.attempts_count, .attempts_success, .client_price, .vendor_price, .dlr, .adt, .incoming_sum, .outgoing_sum, .profit{
+    text-align: center;
+}
+
+
+.customer_rss{
+    background-color: #aaa;
+    color: #000000;
+}
+
+.customer_rss>.name{
+    padding-left: 5px;
+}
+
+.account_rss{
+    background-color:#ccc;
+    color: #000000;
+    display: none
+}
+
+.account_rss>.name{
+    padding-left: 15px;
+}
+
+.country_rss{
+    background-color:#ddd;
+    color: #000000;
+    display: none
+}
+
+.country_rss>.name{
+    padding-left: 25px;
+}
+
+.network_rss{
+    background-color:#eee;
+    color: #000000;
+    display: none
+}
+
+.network_rss>.name{
+    padding-left: 35px;
+}
+
+.vendor_rss{
+    background-color:#fff;
+    color: #000000;
+    display: none
+}
+
+.vendor_rss>.name{
+    padding-left: 45px;
+}

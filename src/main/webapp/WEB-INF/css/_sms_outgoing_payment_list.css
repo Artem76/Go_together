@@ -1,0 +1,50 @@
+
+.date_form {
+    box-sizing: border-box;
+    width: 290px;
+    height: 31px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+}
+
+.datetime_form {
+    box-sizing: border-box;
+    width: 100%;
+    height: 31px;
+    margin-bottom: 3px;
+}
+
+.datetime_form>div{
+    position: fixed;
+    top:145px !important;
+    left: 15px !important;
+}
+
+.table-condensed {
+    width: 100%;
+    align: center;
+}
+
+.table-condensed td {
+    align-content: center;
+    line-height: 10px;
+}
+
+.table-condensed td a {
+    display: block;
+    align: center;
+    width: 100%;
+}
+
+.table-condensed td a span {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 10px;
+}
+
+.table-condensed td a span::before {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+}

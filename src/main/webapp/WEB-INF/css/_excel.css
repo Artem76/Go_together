@@ -1,0 +1,21 @@
+table#excel {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+table#excel td {
+    border: 1px solid grey;
+}
+
+table#excel tr.head {
+    background-color: lightgrey;
+}
+
+table#excel td.td_-1 {
+    background-color: lightgrey;
+}
+
+table#excel select {
+    min-width: 100%;
+    background-color: lightgrey;
+}

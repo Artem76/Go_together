@@ -1,0 +1,56 @@
+#content{
+    overflow: auto;
+}
+
+.td-checkbox {
+    vertical-align: middle;
+}
+
+.scroll-x {
+    overflow-x: auto;
+}
+
+.scroll-y {
+    overflow-y: auto;
+}
+
+.inner {
+    padding-left: 0;
+    overflow: hidden;
+    display: none;
+}
+
+
+
+/*li{
+    list-style-type: none;
+    margin-right: -20px;
+}*/
+
+.field-left{
+    float: left;
+
+}
+
+.field-right{
+    float: right;
+    width: 130px;
+}
+
+.field-row{
+    background-color: lightgrey;
+    width: 80%;
+    padding: 5px;
+    margin: 2px;
+}
+
+/*.report-table th {
+    text-align: center;
+}*/
+
+.dd_menu{
+    box-sizing: border-box;
+    height: 31px;
+    margin-bottom: 3.25px;
+    border: 1px solid rgba(0,0,0,.15);
+}

@@ -1,0 +1,30 @@
+[name='messageLogForTTList']{
+    border: 1px solid white;
+}
+
+.mc-content{
+    width: 50%;
+}
+
+.email_content{
+    max-height: 250px;
+    overflow: auto;
+    border-bottom: 1px solid white;
+}
+
+.new_email_body{
+    height: 90px;
+}
+
+.new_email_btn{
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.flex-container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
